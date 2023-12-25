@@ -4,11 +4,8 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.aula.bancosql.domain.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
