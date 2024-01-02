@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.aula.bancosql.domain.Category;
 import com.aula.bancosql.domain.Order;
 import com.aula.bancosql.domain.OrderItem;
+import com.aula.bancosql.domain.Payment;
 import com.aula.bancosql.domain.Product;
 import com.aula.bancosql.domain.User;
 import com.aula.bancosql.domain.enums.OrderStatus;
@@ -81,6 +82,10 @@ public class TestConfig implements CommandLineRunner {
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1,oi2,oi3,oi4));
 
+        Payment pay1 =new Payment(null, Instant.parse("2019-06-20T22:53:07Z"), o1);
+        o1.setPayment(pay1);
+        
+        orderRepository.save(o1);
 	}
 
 }
