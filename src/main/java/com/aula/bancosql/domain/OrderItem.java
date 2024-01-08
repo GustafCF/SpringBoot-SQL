@@ -1,6 +1,7 @@
 package com.aula.bancosql.domain;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 import com.aula.bancosql.domain.pk.OrderItemPK;
@@ -64,6 +65,10 @@ public class OrderItem implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public Double getSubTotal() {
+		return price * quantity;
 	}
 
 	@Override
